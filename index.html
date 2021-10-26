@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>110Qbeik</title>
+</head>
+<body>
+    <script src="js/pixi.min.js"></script>
+    <script>
+		var app = new PIXI.Application(600,450);
+        document.body.appendChild(app.view);
+		var bg1 = new PIXI.Sprite.fromImage("res/h.png");
+		app.stage.addChild(bg1);
+		bg1.width=600;
+		bg1.height=450;
+       
+	    var bg = new PIXI.Sprite.fromImage("res/b.png");
+		app.stage.addChild(bg);
+        var yezi = new PIXI.Sprite.fromImage("res/d.png");
+		bg.addChild(yezi);
+		yezi.anchor.set(0.5,0.5);
+		yezi.rotation=1.5;
+		yezi.width=100;
+		yezi.height=120;
+		yezi.x=100;
+		yezi.y=80; 
+		app.stage.addChild(yezi);
+		
+		var yezi1 = new PIXI.Sprite.fromImage("res/e.png");
+		yezi1.anchor.set(0.5,0.5);
+		yezi1.rotation=1.5;
+		yezi1.width=100;
+		yezi1.height=120;
+		yezi1.x=160;
+		yezi1.y=170;  
+        app.stage.addChild(yezi1);
+		
+		var yezi2 = new PIXI.Sprite.fromImage("res/f.png");
+		yezi2.anchor.set(0.5,0.5);
+		yezi2.rotation=1.5;
+		yezi2.width=100;
+		yezi2.height=120;
+		yezi2.x=220;
+		yezi2.y=260;  
+		app.stage.addChild(yezi2);
+		
+		var yezi3 = new PIXI.Sprite.fromImage("res/g.png");
+		yezi3.anchor.set(0.5,0.5);
+		yezi3.rotation=1.5;
+		yezi3.width=100;
+		yezi3.height=120;
+		yezi3.x=280;
+		yezi3.y=350; 
+		app.stage.addChild(yezi3);
+
+		yezi.interactive = true;
+        yezi.on("mousedown",move);
+		function move(event) {
+		yezi.width=90;
+		yezi.height=108;
+		}
+		yezi.on("mouseup",enter);
+		function enter(even) {
+		yezi.width=100;
+		yezi.height=120;
+		}
+		
+		yezi.on("click",bianhuan);
+		function bianhuan(){
+			bg.visible=false;
+			bg1.visible=true;
+			yezi.visible=false;
+			yezi1.visible=false;
+			yezi2.visible=false;
+			yezi3.visible=false;
+			yezi4.visible=true;
+		}
+
+		
+		
+
+		yezi1.interactive = true;
+		yezi1.on("mousedown",move1);
+		function move1(event) {
+		yezi1.width=90;
+		yezi1.height=108;
+		}
+		yezi1.on("mouseup",enter1);
+		function enter1(even) {
+		yezi1.width=100;
+		yezi1.height=120;
+		}
+		
+		yezi2.interactive = true;
+		yezi2.on("mousedown",move2);
+		function move2(event) {
+		yezi2.width=90;
+		yezi2.height=108;
+		}
+		yezi2.on("mouseup",enter2);
+		function enter2(even) {
+		yezi2.width=100;
+		yezi2.height=120;
+		}
+		
+		yezi3.interactive = true;
+		yezi3.on("mousedown",move3);
+		function move3(event) {
+		yezi3.width=90;
+		yezi3.height=108;
+		}
+		yezi3.on("mouseup",enter3);
+		function enter3(even) {
+		yezi3.width=100;
+		yezi3.height=120;
+		}
+		
+		var yezi4 = new PIXI.Sprite.fromImage("res/i.png");
+		yezi4.anchor.set(0.5,0.5);
+		yezi4.rotation=1.5;
+		yezi4.width=100;
+		yezi4.height=120;
+		yezi4.x=540;
+		yezi4.y=400;  
+		yezi4.visible=false;
+		app.stage.addChild(yezi4);
+		
+		yezi4.interactive = true;
+		yezi4.on("mousedown",move4);
+		function move4(event4) {
+		yezi4.width=90;
+		yezi4.height=108;
+		}
+		yezi4.on("mouseup",enter4);
+		function enter4(even) {
+		yezi4.width=100;
+		yezi4.height=120;
+		}
+		yezi4.on("click",bianhuan1);
+		function bianhuan1(){
+			bg.visible=true;
+			bg1.visible=false;
+			yezi.visible=true;
+			yezi1.visible=true;
+			yezi2.visible=true;
+			yezi3.visible=true;
+			yezi4.visible=false;
+		}
+		
+
+
+    </script>
+</body>
+</html>
